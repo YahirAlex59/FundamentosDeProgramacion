@@ -39,6 +39,6 @@ Opciones:
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 *Yahir Alexander Orta Rivero*  
-Repositorio para revisión de la maestra de *Fundamentos de Programación*.
+Repositorio para revisión de *Fundamentos de Programación.
