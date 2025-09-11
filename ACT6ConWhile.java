@@ -1,7 +1,10 @@
 import java.util.Scanner;
-public class ACTIVIDAD6SwitchCase {
-    public static void main(String[] args) {
+
+public class ACT6ConWhile {
+     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        String lop;
+        do {
         int personas;
         String dia;
         boolean membresia;
@@ -27,6 +30,9 @@ public class ACTIVIDAD6SwitchCase {
             total *= 0.10;
         }
         System.out.println("El precio total es: $" + total);
+        System.out.println("desaea continuar? (si/no): ");
+        lop = sc.next();
+        } while (lop.equalsIgnoreCase("si"));
         sc.close();
-    }
+    }     
 }

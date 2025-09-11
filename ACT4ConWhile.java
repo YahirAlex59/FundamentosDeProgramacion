@@ -1,8 +1,11 @@
 import java.util.Scanner;
-public class ACTIVIDAD4SwitchCase {
+
+public class ACT4ConWhile {
     public static void main(String[] args) {
+     Scanner sc = new Scanner (System.in);
+     String condition;
+        do {
         int hora;
-        Scanner sc = new Scanner (System.in);
         System.out.println("dime una hora del dia sin minutos");
         hora = sc.nextInt();
         switch (hora) {
@@ -20,7 +23,10 @@ public class ACTIVIDAD4SwitchCase {
 
             break;
         }
-        
+        System.out.println("¿Desea continuar? (si/no): ");
+        condition = sc.next();
+        } while (condition.equalsIgnoreCase("si"));
         sc.close();
+        System.out.println("operacionTerminada");
     }
 }

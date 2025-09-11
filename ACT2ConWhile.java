@@ -1,11 +1,13 @@
 import java.util.Scanner;
-public class ACTIVIDAD2SwitchCase {
 
+public class ACT2ConWhile {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int num1, num2;
+        String con = "si";
+        
+        while (con.equalsIgnoreCase("si")) {
+        float num1, num2;
         String operacion;
-
         System.out.println("Ingrese el primer número: ");
         num1 = sc.nextInt();
         System.out.println("Ingrese el segundo número: ");
@@ -33,6 +35,11 @@ public class ACTIVIDAD2SwitchCase {
             default:
                 System.out.println("Operador inválido");
         }
+        System.out.println("desaes realizar otra operacion? si/no");
+        con = sc.nextLine();
+    }
+        System.out.println("operacionTerminada");
         sc.close();
     }
 }
+

@@ -1,10 +1,13 @@
 import java.util.Scanner;
-public class ACTIVIDAD1SwitchCase {
+
+public class ACT1ConWhile {
     public static void main(String[] args) {
-        int dia;
-        Scanner Scanner = new Scanner (System.in);
+    Scanner Scanner = new Scanner (System.in);
+    String continuar = "si";
+
+    while (continuar.equalsIgnoreCase("si"))    {
     System.out.println("escibre un numero del 1-12 para saber el mes y cuantos dias tiene");
-        dia = Scanner.nextInt();
+        int dia = Scanner.nextInt();
         switch (dia) {
             case 1:
                 System.out.println("Enero 31 dias");
@@ -46,6 +49,11 @@ public class ACTIVIDAD1SwitchCase {
                 System.out.println("no existe ese mas");
             break;
         }
+        System.out.println("deseas continuar? si/no");
+        continuar = Scanner.next();
+       
+    }
+     System.out.println("Operacion Terminada");
         Scanner.close();
     }
 }

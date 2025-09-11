@@ -23,6 +23,4 @@ public class whileForDoWhile {
 		}
 		System.out.println("resultado for: "+resultado);
 	}
-
-
 }
