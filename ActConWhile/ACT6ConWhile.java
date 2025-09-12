@@ -1,3 +1,4 @@
+package ActConWhile;
 import java.util.Scanner;
 
 public class ACT6ConWhile {
