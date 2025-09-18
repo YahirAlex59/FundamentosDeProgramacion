@@ -1,15 +1,16 @@
+package PrimerParcial.ActConWhile;
 import java.util.Scanner;
 
-public class ACTIVIDAD5 {
+public class ACT5ConWhile {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        String con="si";
+     do {
         int dia, mes;
-
         System.out.print("Ingresa tu día de nacimiento: ");
         dia = sc.nextInt();
         System.out.print("Ingresa tu mes de nacimiento (1-12): ");
         mes = sc.nextInt();
-
         String signo;
 
         if (mes == 1) {
@@ -53,7 +54,10 @@ public class ACTIVIDAD5 {
         }
 
         System.out.println("Tu signo zodiacal es: " + signo);
-
+        System.out.println("¿Desea continuar? (si/no): ");
+        con = sc.next();
+    } while (con.equalsIgnoreCase("si"));
         sc.close();
+        System.out.println("operacionTerminada");
     }
 }

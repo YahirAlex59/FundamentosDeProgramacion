@@ -1,11 +1,8 @@
-package ActConWhile;
+package PrimerParcial.javaTrabajos.SwitchCase;
 import java.util.Scanner;
-
-public class ACT3ConWhile {
-    public static void main(String[] args) {
+public class ACTIVIDAD3 {
+        public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String lop = ("si");
-       while (lop.equalsIgnoreCase("si")) {
         int opcion;
         double lado, base, altura, radio, area = 0;
 
@@ -49,10 +46,6 @@ public class ACT3ConWhile {
             default:
                 System.out.println("Opción inválida");
         }
-        System.out.println("quieres continuar con la operacion");
-        lop = sc.next();
-        System.out.println("operacionTerminada");
-    }
     sc.close();
     }
 }

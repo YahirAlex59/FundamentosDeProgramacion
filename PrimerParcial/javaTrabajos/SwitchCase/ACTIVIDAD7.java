@@ -1,10 +1,8 @@
-package ActConWhile;
+package PrimerParcial.javaTrabajos.SwitchCase;
 import java.util.Scanner;
-public class ACT7ConWhile {
+public class ACTIVIDAD7 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String con;
-                do {
                     String sabor;
                     String tipoChocolate = "";
                     double precio = 0;
@@ -36,10 +34,6 @@ public class ACT7ConWhile {
                         precio = precio + 30;
                     }
                     System.out.println("El precio total de la tarta es: $" + precio);
-                    System.out.println("¿Desea continuar? (si/no): ");
-                    sc.nextLine(); // consume leftover newline
-                    con = sc.nextLine();
-                } while (con.equalsIgnoreCase("si"));
                 sc.close();
                 System.out.println("Gracias por su compra.");
             }

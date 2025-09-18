@@ -1,4 +1,4 @@
-package condicionales;
+package PrimerParcial.javaTrabajos.condicionales;
 import java.util.Scanner;
 public class velocidad {
     public static void main(String[] args) {

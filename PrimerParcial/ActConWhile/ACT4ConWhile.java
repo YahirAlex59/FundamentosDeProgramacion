@@ -1,4 +1,4 @@
-package ActConWhile;
+package PrimerParcial.ActConWhile;
 import java.util.Scanner;
 
 public class ACT4ConWhile {

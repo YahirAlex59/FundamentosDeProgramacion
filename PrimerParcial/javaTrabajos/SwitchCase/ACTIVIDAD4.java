@@ -1,3 +1,4 @@
+package PrimerParcial.javaTrabajos.SwitchCase;
 import java.util.Scanner;
 public class ACTIVIDAD4 {
     public static void main(String[] args) {
