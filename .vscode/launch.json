@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "FigurasConAsteriscos",
+            "request": "launch",
+            "mainClass": "FigurasConAsteriscos",
+            "projectName": "fundamentos de programacion_cf998575"
+        },
+        {
+            "type": "java",
+            "name": "Run Current File",
+            "request": "launch",
+            "mainClass": "${fileBasenameNoExtension}"
+        }
+    ]
+}

@@ -19,7 +19,7 @@ while (contador <= NumeroElementos-2) {
     A = B;
     B = valorgen;
     contador = contador + 1;
-
+    Sc.close();
 }
 
 } 

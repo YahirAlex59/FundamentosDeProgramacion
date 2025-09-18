@@ -11,6 +11,7 @@ public class TareaTablasDeMultiplicar {
             }
         } else {
             System.out.println("operacion terminada");
+            Sc.close();
         }
     }
 }
