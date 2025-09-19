@@ -1,3 +1,4 @@
+package TareasUsandoFor;
 import java.util.Scanner;
 public class TareaTablasDeMultiplicar {
     public static void main(String[] args) {

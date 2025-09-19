@@ -1,3 +1,4 @@
+package TareasUsandoFor;
 import java.util.Scanner;
 
 public class FigurasConAsteriscos {
