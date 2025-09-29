@@ -26,7 +26,7 @@ public class EjercicioReferencia {
 
             System.out.print("Introduce la edad (0 para salir): ");
             int edad = sc.nextInt();
-            sc.nextLine(); 
+             
             if (edad == 0) {
                 System.out.println("Programa terminado ✅");
                 break;
