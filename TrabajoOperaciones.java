@@ -1,14 +1,17 @@
+import java.util.Arrays;
 import java.util.Scanner;
 public class TrabajoOperaciones {
 public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
+    int opcion = 0;
     System.out.println("INGRESA EL TAMAÑO DEL ARREGLO");
      int N = sc.nextInt();
         int[] Arreglo = new int[N];
         for (int i = 0; i < N ; i++ ) {
-            System.out.println("INGRESA LOS ELEMENTOS DEL ARREGLO" + (i + 1)+ ": ");
+            System.out.println("INGRESA LOS ELEMENTOS DEL ARREGLO  " + (i + 1)+ " : ");
             Arreglo[i] = sc.nextInt();
         }
+do {
     System.out.println("|====MENU DE  OPERACIONES====|");
     System.out.println("|====ELIGE UNA OPERACION=====|");
     System.out.println("|1 : RECORRER EL ARREGLO     |");
@@ -19,10 +22,10 @@ public static void main(String[] args) {
     System.out.println("|6 : ORDENAR ACENDENTE       |");
     System.out.println("|7 : ORDENAR DECENDENTE      |");
     System.out.println("|0 : SALIR                   |");
-
-    System.out.print("Elija una opción: ");
-    int opcion = sc.nextInt();
     
+    System.out.print("Elija una opción: ");
+    opcion = sc.nextInt();
+
     switch (opcion) {
         case 1: 
             System.out.println("RECORRER EL ARREGLO |DECENDETE O ACENDENTE|");
@@ -39,8 +42,8 @@ public static void main(String[] args) {
                 System.out.println(Arreglo[i]);
             }
         }
+         break;
         case 2:
-        
             System.out.println("BUSCAR ELEMENTO");
             System.out.print("INGRESA EL ELEMENTO A BUSCAR : ");
             int buscar = sc.nextInt();
@@ -51,12 +54,12 @@ public static void main(String[] args) {
                }
             }
                    if (encontrado) {
+                    
                     System.out.println("El elemento " + buscar + " está en la lista."); 
                    } else {
                     System.out.println("El elemento " + buscar + " no fue encontrado.");
                   }
             break;
-
         case 3:
             System.out.println("MODIFICAR ELEMENTO");
             System.out.println("======arreglo=======");
@@ -106,13 +109,26 @@ public static void main(String[] args) {
             System.out.println("======arreglo modificado=======");
             for (int arreglomod : Arreglo) {
         System.out.println(arreglomod);
-        break;
         }
+        break;
         case 6:
         System.out.println("ORDENAR ACENDENTE");
-        
-    }
-        sc.close();
+        Arrays.sort(Arreglo);
+        System.out.println("modificado");
+        for (int arreglomod : Arreglo) {
+        System.out.println(arreglomod);
+        }
+        break;
+        case 7:
+        Arrays.sort(Arreglo);
+        for (int i = Arreglo.length-1; i >= 0; i--){
+        System.out.println(Arreglo[i]);
+        }
+        break;
     } 
+    } while (opcion != 0);
+    sc.close();
+}
+
 }
 
