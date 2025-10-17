@@ -1,3 +1,4 @@
+package SegundoParcial.Ejemplos;
 import java.util.Scanner;
 public class BusquedaArreglo {
 public static void main(String[] args) {

@@ -1,3 +1,4 @@
+package SegundoParcial.Ejemplos;
 import java.util.Scanner;
 
 class Persona {

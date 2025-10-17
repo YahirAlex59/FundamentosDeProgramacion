@@ -1,3 +1,4 @@
+package SegundoParcial.Ejemplos;
 public class whileForDoWhile {
 
 	public static void main(String args[]) {

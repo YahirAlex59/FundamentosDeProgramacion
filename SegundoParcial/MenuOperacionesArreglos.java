@@ -1,3 +1,4 @@
+package SegundoParcial;
 import java.util.Scanner;
 
 public class MenuOperacionesArreglos {

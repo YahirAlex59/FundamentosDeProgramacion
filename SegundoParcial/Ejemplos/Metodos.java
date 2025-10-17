@@ -1,3 +1,4 @@
+package SegundoParcial.Ejemplos;
 import java.util.Scanner;
 public class Metodos {
     static Scanner Sc = new Scanner(System.in);

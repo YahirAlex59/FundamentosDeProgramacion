@@ -1,3 +1,4 @@
+package SegundoParcial.Ejemplos;
 import java.util.Scanner;
 public class EjercicioValor {
 	// Método que intenta intercambiar dos enteros

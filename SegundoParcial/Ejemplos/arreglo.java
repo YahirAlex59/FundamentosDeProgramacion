@@ -1,3 +1,4 @@
+package SegundoParcial.Ejemplos;
 import java.util.Scanner;
 public class arreglo {
     public static void main(String[] args) {

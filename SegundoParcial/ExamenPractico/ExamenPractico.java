@@ -1,3 +1,4 @@
+package SegundoParcial.ExamenPractico;
 import java.util.Scanner;
 
 public class ExamenPractico {
@@ -11,7 +12,6 @@ public class ExamenPractico {
             System.out.print("Ingresa el valor [" + (i + 1) + "]: ");
             lista[i] = scanner.nextInt();
         }
-        int tope = lista.length - 1;
         System.out.println("Pila llenada correctamente.");
         
         for (int i = 0; i < lista.length - 1; i++) {

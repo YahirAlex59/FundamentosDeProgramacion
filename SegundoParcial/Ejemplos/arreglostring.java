@@ -1,3 +1,4 @@
+package SegundoParcial.Ejemplos;
 public class arreglostring {
     public static void main(String[] args) {
         String nombres [] = {"yahir","alex","orta","rivero"};
