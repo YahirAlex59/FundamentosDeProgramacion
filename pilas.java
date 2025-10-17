@@ -58,6 +58,7 @@ public static void eliminar() {
   if (tope == -1) {
           System.out.println("La pila está vacía, no hay nada que eliminar.");
       } else {
+        
           System.out.println("Cadena eliminada: \"" + pila[tope] + "\"");
           tope--;
       }

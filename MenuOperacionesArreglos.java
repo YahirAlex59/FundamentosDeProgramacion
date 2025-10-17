@@ -142,13 +142,13 @@ public class MenuOperacionesArreglos {
     if (arreglo.length == 0) {
          System.out.println("El arreglo está vacío.");
         return;
-        }
+    }
         int pos = leerEntero("Ingresa la posición a eliminar (0 - " + (arreglo.length - 1) + "): ");
         if (pos >= 0 && pos < arreglo.length) {
          int[] nuevo = new int[arreglo.length - 1];
         int i = 0, j = 0;
         while (i < arreglo.length) {
-            if (i != pos) {
+        if (i != pos) {
             nuevo[j] = arreglo[i];
             j++;
                 }
