@@ -18,7 +18,7 @@ public class matrices {
     System.out.println("|9 : ORDENAR DECENDENTE      |");
     System.out.println("|0 : SALIR                   |");
     opcion = leerEntero("Elige una opción: ");
-
+    
         switch (opcion) {
                 case 1 -> guardarValores();
                 case 2 -> recorrerAscendente();
@@ -140,7 +140,7 @@ public static int leerEntero(String mensaje) {
         }
     }
 static void eliminarElemento() {
-    if (matriz.length == 0) {
+    if (matriz == null || matriz.length == 0) {
         System.out.println("La matriz está vacía.");
         return;
         }
@@ -149,7 +149,7 @@ static void eliminarElemento() {
         fila --;
         columna --;
         if (fila >= 0 && fila < matriz.length && columna >= 0 && columna < matriz[0].length) {
-            matriz[fila][columna] = 0;
+            matriz[fila][columna] = null;// agragar null para que en ordenar no se tome en cuenta y se coloque en el filal o inicio
             System.out.println("Elemento eliminado (valor puesto en 0).");
             recorrerAscendente();
         } else {
