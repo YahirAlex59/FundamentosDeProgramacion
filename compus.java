@@ -24,8 +24,8 @@ public class compus {
         System.out.println("\n--- Ingrese las ventas ---");
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[0].length; j++) {
-                System.out.print("Vendedor " + (i + 1) + ", Zona " + (j + 1) + ": ");
-                matriz[i][j] = scanner.nextInt();
+            System.out.print("Vendedor " + (i + 1) + ", Zona " + (j + 1) + ": ");
+             matriz[i][j] = scanner.nextInt();
             }
     }
     }
@@ -72,8 +72,11 @@ public class compus {
             }
         }
         String tipoVenta = isMax ? "más" : "menos";
+        System.out.println("|=================================|");
         System.out.println("El vendedor que " + tipoVenta + " computadoras vendió es el Vendedor " + (vendedorExtremoIndex + 1) + ":");
+        System.out.println("|=================================|");
         System.out.println("Cantidad de computadoras vendidas: " + totalVentasVendedor);
+        System.out.println("|=================================|");
         System.out.println("Valor de su venta (si cada computadora vale 1 unidad): " + totalVentasVendedor); 
     }
     public static int sumarTotalVentas(int[][] ventas) {

@@ -46,14 +46,14 @@ public class menumatriz {
     static void rellenarMatriz() {
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
-                int valor;
-                while (true) {
-                    System.out.print("Valor [" + i + "][" + j + "]: ");
-                    valor = sc.nextInt();
-                    if (!existe(valor)) break;
-                    System.out.println("Valor repetido. Ingresa otro.");
+            int valor;
+            while (true) {
+                System.out.print("Valor [" + (i+1) + "][" + (j+1) + "]: ");
+                valor = sc.nextInt();
+                if (!existe(valor)) break;
+                System.out.println("Valor repetido. Ingresa otro.");
                 }
-                matriz[i][j] = valor;
+            matriz[i][j] = valor;
             }
         }
         rellenada = true;
@@ -79,48 +79,25 @@ public class menumatriz {
         for (int i = 0; i < 4; i++) {
             int sumaFila = 0, sumaColumna = 0;
             for (int j = 0; j < 4; j++) {
-                sumaFila += matriz[i][j];
-                sumaColumna += matriz[j][i];
+            sumaFila += matriz[i][j];
+            sumaColumna += matriz[j][i];
             }
             System.out.println("Fila " + i + ": " + sumaFila + " | Columna " + i + ": " + sumaColumna);
         }
     }
 
-    static void sumaFila() {
-        mostrarMatriz();
-        System.out.print("Número de fila (0-3): ");
-        int f = sc.nextInt();
-        if (f < 0 || f > 3) System.out.println("Fila inválida.");
-        else {
-            int suma = 0;
-            for (int v : matriz[f]) suma += v;
-            System.out.println("Suma fila " + f + ": " + suma);
-        }
-    }
-
-    static void sumaColumna() {
-        mostrarMatriz();
-        System.out.print("Número de columna (0-3): ");
-        int c = sc.nextInt();
-        if (c < 0 || c > 3) System.out.println("Columna inválida.");
-        else {
-            int suma = 0;
-            for (int i = 0; i < 4; i++) suma += matriz[i][c];
-            System.out.println("Suma columna " + c + ": " + suma);
-        }
-    }
-
+   
     static void mayorMenor() {
         mostrarMatriz();
         int mayor = matriz[0][0], menor = matriz[0][0];
         int imay = 0, jmay = 0, imen = 0, jmen = 0;
         for (int i = 0; i < 4; i++)
             for (int j = 0; j < 4; j++) {
-                if (matriz[i][j] > mayor) { mayor = matriz[i][j]; imay = i; jmay = j; }
-                if (matriz[i][j] < menor) { menor = matriz[i][j]; imen = i; jmen = j; }
+            if (matriz[i][j] > mayor) { mayor = matriz[i][j]; imay = i; jmay = j; }
+            if (matriz[i][j] < menor) { menor = matriz[i][j]; imen = i; jmen = j; }
             }
-        System.out.println("Mayor: " + mayor + " en [" + imay + "][" + jmay + "]");
-        System.out.println("Menor: " + menor + " en [" + imen + "][" + jmen + "]");
+        System.out.println("Mayor: " + mayor + " en [" + (imay+1) + "][" + (jmay+1) + "]");
+        System.out.println("Menor: " + menor + " en [" + (imen+1) + "][" + (jmen+1) + "]");
     }
 
     static void contarPares() {
@@ -128,7 +105,7 @@ public class menumatriz {
         int c = 0;
         for (int[] fila : matriz)
             for (int v : fila)
-                if (v % 2 == 0) c++;
+        if (v % 2 == 0) c++;
         System.out.println("Cantidad de pares: " + c);
     }
 
@@ -136,17 +113,42 @@ public class menumatriz {
         mostrarMatriz();
         int c = 0;
         for (int[] fila : matriz)
-            for (int v : fila)
-                if (v % 2 != 0) c++;
+        for (int v : fila)
+            if (v % 2 != 0) c++;
         System.out.println("Cantidad de impares: " + c);
+    }
+
+     static void sumaFila() {
+        mostrarMatriz();
+        System.out.print("Número de fila (1-4): ");
+        int f = sc.nextInt();
+        if (f < 1 || f > 4) System.out.println("Fila inválida.");
+        else {
+            int suma = 0;
+            for (int v : matriz[f-1]) suma += v;
+            System.out.println("Suma fila " + f + ": " + suma);
+        }
+    }
+
+    static void sumaColumna() {
+        mostrarMatriz();
+        System.out.print("Número de columna (1-4): ");
+        int c = sc.nextInt();
+        c -= 1;
+        if (c < 0 || c > 4) System.out.println("Columna inválida.");
+        else {
+            int suma = 0;
+            for (int i = 0; i < 4; i++) suma += matriz[i][c];
+            System.out.println("Suma columna " + c + ": " + suma);
+        }
     }
 
     static void matrizCuadrados() {
         mostrarMatriz();
         int[][] cuadrado = new int[4][4];
         for (int i = 0; i < 4; i++)
-            for (int j = 0; j < 4; j++)
-                cuadrado[i][j] = matriz[i][j] * matriz[i][j];
+        for (int j = 0; j < 4; j++)
+        cuadrado[i][j] = matriz[i][j] * matriz[i][j];
         System.out.println("Matriz de cuadrados:");
         for (int[] fila : cuadrado) {
             for (int v : fila) System.out.print(v + "\t");
@@ -173,7 +175,7 @@ public class menumatriz {
         int suma = 0;
         for (int[] fila : matriz)
             for (int v : fila)
-                suma += v;
+            suma += v;
         double media = (double) suma / 16;
         System.out.println("Media: " + media);
     }
