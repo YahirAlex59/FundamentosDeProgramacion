@@ -27,7 +27,7 @@ public class CompaniaTransporte {
                 continue;
                 }
                 horas[i][j] = pedirHorasValidas(dias[j]);
-            }
+        }
         }
     }
     static String pedirDiaDescanso() {
@@ -39,8 +39,7 @@ public class CompaniaTransporte {
             if (d.equalsIgnoreCase(dia)) {
                 invalido = true;
                 break;
-                }
-            }
+                }}
             if (invalido) return dia;
             else System.out.println("Día inválido. Escribe un día válido");
         }
@@ -52,12 +51,12 @@ public class CompaniaTransporte {
         while (!valido) {
             System.out.print("Sueldo por hora: ");
             if (sc.hasNextDouble()) {
-                sueldo = sc.nextDouble();
-                if (sueldo > 0) valido = true;
-                else System.out.println("El sueldo debe ser mayor a 0.");
-            } else {
-                System.out.println("Ingresa un número válido.");
-                sc.next();
+            sueldo = sc.nextDouble();
+            if (sueldo > 0) valido = true;
+            else System.out.println("El sueldo debe ser mayor a 0.");
+        } else {
+        System.out.println("Ingresa un número válido.");
+        sc.next();
             }
         }
         sc.nextLine();
@@ -70,8 +69,7 @@ public class CompaniaTransporte {
         if (sc.hasNextInt()) {
             h = sc.nextInt();
             if (h < 0 || h > 24) {
-            System.out.println("Las horas no pueden ser menores a 0 ni mayores a 24.");
-        }
+            System.out.println("Las horas no pueden ser menores a 0 ni mayores a 24.");}
             } else {
             System.out.println("Ingresa un número válido.");
             sc.next();
@@ -103,7 +101,6 @@ public class CompaniaTransporte {
         System.out.println("-----------------------------------------------");
         System.out.println("=============== REPORTE SEMANAL ================");
         System.out.println("["+"Nombre"+"]"+"["+"Descanso"+"]"+"["+"Sueldo"+"]"+"["+"Total Horas"+"]"+"["+"Sueldo Semanal"+"]");
-
         for (int i = 0; i < 5; i++) {
             System.out.println("["+nombres[i]+"]" + "\t\t" + "["+diaDescanso[i]+"]" + "\t\t" + "["+sueldoHora[i]+"]" +"\t\t" + "["+totalHoras[i]+"]" + "\t\t" + "["+sueldoSemanal[i]+"]");
         }

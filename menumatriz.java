@@ -3,7 +3,6 @@ public class menumatriz {
     static int[][] matriz = new int[4][4];
     static boolean rellenada = false;
     static Scanner sc = new Scanner(System.in);
-
     public static void main(String[] args) {
         int opcion;
         do {
@@ -59,7 +58,6 @@ public class menumatriz {
         rellenada = true;
         mostrarMatriz();
     }
-
     static boolean existe(int valor) {
         for (int[] fila : matriz)
             for (int v : fila)
@@ -85,8 +83,6 @@ public class menumatriz {
             System.out.println("Fila " + i + ": " + sumaFila + " | Columna " + i + ": " + sumaColumna);
         }
     }
-
-   
     static void mayorMenor() {
         mostrarMatriz();
         int mayor = matriz[0][0], menor = matriz[0][0];

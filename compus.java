@@ -11,23 +11,13 @@ public class compus {
         llenarMatriz(ventas, scanner);
 
      int zonaMax = zonaConMasVentas(ventas);
-        System.out.println("----------- Resultados -------------");
+        System.out.println("----------------------- Resultados -------------------------");
         System.out.println("La zona que más computadoras vendió es la Zona "+ "[" + (zonaMax + 1)+ "]");
         mostrarVendedorExtremo(ventas, true);
         mostrarVendedorExtremo(ventas, false);
         int totalVentas = sumarTotalVentas(ventas);
         System.out.println("La cantidad total de computadoras vendidas es: " + totalVentas);
-        
         scanner.close();
-    }
-    public static void llenarMatriz(int[][] matriz, Scanner scanner) {
-        System.out.println("\n--- Ingrese las ventas ---");
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[0].length; j++) {
-            System.out.print("Vendedor " + (i + 1) + ", Zona " + (j + 1) + ": ");
-             matriz[i][j] = scanner.nextInt();
-            }
-    }
     }
     public static int zonaConMasVentas(int[][] ventas) {
         int numZonas = ventas[0].length;
@@ -47,23 +37,30 @@ public class compus {
         }
         return zonaMaxIndex;
     }
+    public static void llenarMatriz(int[][] matriz, Scanner scanner) {
+        System.out.println("\n--- Ingrese las ventas ---");
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[0].length; j++) {
+            System.out.print("Vendedor " + (i + 1) + ", Zona " + (j + 1) + ": ");
+             matriz[i][j] = scanner.nextInt();
+            }
+    }
+    }
+    
     public static void mostrarVendedorExtremo(int[][] ventas, boolean isMax) {
         int numVendedores = ventas.length;
         int totalVentasVendedor = -1;
         int vendedorExtremoIndex = -1;
         if (!isMax) {
             totalVentasVendedor = Integer.MAX_VALUE; }
-
         for (int i = 0; i < numVendedores; i++) {
             int sumaVentas = 0;
             for (int j = 0; j < ventas[i].length; j++) {
                 sumaVentas += ventas[i][j]; }
-
             if (isMax) {
                 if (sumaVentas > totalVentasVendedor) {
                 totalVentasVendedor = sumaVentas;
-                vendedorExtremoIndex = i;
-                }
+                vendedorExtremoIndex = i;}
             } else {
                 if (sumaVentas < totalVentasVendedor) {
                 totalVentasVendedor = sumaVentas;
@@ -71,13 +68,14 @@ public class compus {
                 }
             }
         }
+        
         String tipoVenta = isMax ? "más" : "menos";
         System.out.println("|=================================|");
-        System.out.println("El vendedor que " + tipoVenta + " computadoras vendió es el Vendedor " + (vendedorExtremoIndex + 1) + ":");
+        System.out.println("El vendedor que " + tipoVenta + " computadoras vendió es el vendedor " + (vendedorExtremoIndex + 1) + ":");
         System.out.println("|=================================|");
         System.out.println("Cantidad de computadoras vendidas: " + totalVentasVendedor);
         System.out.println("|=================================|");
-        System.out.println("Valor de su venta (si cada computadora vale 1 unidad): " + totalVentasVendedor); 
+        System.out.println("Valor de su venta (si cada computadora vale 1peso unidad): " + totalVentasVendedor); 
     }
     public static int sumarTotalVentas(int[][] ventas) {
         int total = 0;

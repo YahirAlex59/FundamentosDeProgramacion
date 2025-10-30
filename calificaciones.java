@@ -17,7 +17,7 @@ public class calificaciones {
             }
         }
         double[] promedios = promedioAlumnos(calificaciones);
-        System.out.println("|===============resultado==================|");
+        System.out.println("|===============resultado2==================|");
         System.out.println("Promedio por alumno:");
         for (int i = 0; i < n; i++) System.out.println("Alumno " + (i + 1) + ": " + promedios[i]);
         mejores(promedios);
